@@ -47,5 +47,4 @@
   bind:this={imgElement}
   class="svelte-lazy-image"
   class:svelte-lazy-image--loaded="{loaded}"
-  {...$$props}
 />
