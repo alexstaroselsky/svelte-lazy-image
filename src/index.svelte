@@ -21,9 +21,7 @@
   let intersected = false;
   let loaded = false;
 
-  $: {
-    path = intersected ? src : placeholder;
-  }
+  $: path = intersected ? src : placeholder;
 
   onMount(() => {
     observer.observe(imgElement);
