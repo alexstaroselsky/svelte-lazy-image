@@ -17,13 +17,14 @@
   let imgElement;
   let path;
 
-  let observer = new IntersectionObserver(observerCallback);
+  let observer;
   let intersected = false;
   let loaded = false;
 
   $: path = intersected ? src : placeholder;
 
   onMount(() => {
+    observer = new IntersectionObserver(observerCallback)
     observer.observe(imgElement);
 
     return () => {
@@ -40,9 +41,9 @@
 
 <img
   src={path}
-  alt={alt}
+  {alt}
   on:load={handleLoad}
   bind:this={imgElement}
   class="svelte-lazy-image"
-  class:svelte-lazy-image--loaded="{loaded}"
+  class:svelte-lazy-image--loaded={loaded}
 />

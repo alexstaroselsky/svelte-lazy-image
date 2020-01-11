@@ -14,9 +14,11 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
+    "commit": "git cz",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "git-cz": "^3.3.0",
     "rollup": "^1.16.7",
     "rollup-plugin-svelte": "^5.1.0",
     "svelte": "^3.6.5"
@@ -29,5 +31,5 @@
     "index.mjs",
     "index.js"
   ],
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
