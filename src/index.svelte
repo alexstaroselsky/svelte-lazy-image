@@ -44,6 +44,7 @@
   {alt}
   on:load={handleLoad}
   bind:this={imgElement}
+  {...$$restProps}
   class="svelte-lazy-image"
   class:svelte-lazy-image--loaded={loaded}
 />
