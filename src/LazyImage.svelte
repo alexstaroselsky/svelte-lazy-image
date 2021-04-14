@@ -10,8 +10,22 @@
     });
   };
 
+  /**
+   * Path to placeholder image.
+   * @type {string}
+   */
   export let placeholder;
+
+  /**
+   * Path to image.
+   * @type {string}
+   */
   export let src;
+
+  /**
+   * Alt image text description for accessibility.
+   * @type {string}
+   */
   export let alt;
 
   let imgElement;

@@ -9,9 +9,10 @@
     "type": "git",
     "url": "https://github.com/alexstaroselsky/svelte-lazy-image.git"
   },
-  "svelte": "src/index.svelte",
-  "module": "index.mjs",
-  "main": "index.js",
+  "svelte": "./src/index.js",
+  "module": "./index.mjs",
+  "types": "./types/index.d.ts",
+  "main": "./index.js",
   "scripts": {
     "build": "rollup -c",
     "commit": "git cz",
@@ -21,6 +22,7 @@
     "git-cz": "^3.3.0",
     "rollup": "^2.45.2",
     "rollup-plugin-svelte": "^7.1.0",
+    "sveld": "^0.7.1",
     "svelte": "^3.6.5"
   },
   "keywords": [
@@ -29,7 +31,8 @@
   "files": [
     "src",
     "index.mjs",
-    "index.js"
+    "index.js",
+    "types"
   ],
-  "version": "0.1.1"
+  "version": "0.2.0"
 }
