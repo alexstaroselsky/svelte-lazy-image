@@ -1,0 +1,42 @@
+{
+  "total": 1,
+  "components": [
+    {
+      "moduleName": "LazyImage",
+      "filePath": "src/LazyImage.svelte",
+      "props": [
+        {
+          "name": "placeholder",
+          "kind": "let",
+          "description": "Path to placeholder image.",
+          "type": "string",
+          "isFunction": false,
+          "constant": false,
+          "reactive": false
+        },
+        {
+          "name": "src",
+          "kind": "let",
+          "description": "Path to image.",
+          "type": "string",
+          "isFunction": false,
+          "constant": false,
+          "reactive": false
+        },
+        {
+          "name": "alt",
+          "kind": "let",
+          "description": "Alt image text description for accessibility.",
+          "type": "string",
+          "isFunction": false,
+          "constant": false,
+          "reactive": false
+        }
+      ],
+      "slots": [],
+      "events": [],
+      "typedefs": [],
+      "rest_props": { "type": "Element", "name": "img" }
+    }
+  ]
+}
