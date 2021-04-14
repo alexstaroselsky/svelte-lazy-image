@@ -19,8 +19,8 @@
   },
   "devDependencies": {
     "git-cz": "^3.3.0",
-    "rollup": "^1.16.7",
-    "rollup-plugin-svelte": "^5.1.0",
+    "rollup": "^2.45.2",
+    "rollup-plugin-svelte": "^7.1.0",
     "svelte": "^3.6.5"
   },
   "keywords": [
@@ -31,5 +31,5 @@
     "index.mjs",
     "index.js"
   ],
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
