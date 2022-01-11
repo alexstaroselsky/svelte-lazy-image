@@ -1,8 +1,8 @@
 <script>
   import { onMount } from "svelte";
 
-  let observerCallback = function(entries, observer) {
-    entries.forEach(entry => {
+  let observerCallback = function (entries, observer) {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         intersected = true;
         observer.unobserve(imgElement);
@@ -28,6 +28,8 @@
    */
   export let alt;
 
+  const propsClasses = $$restProps.class ? " " + $$restProps.class : "";
+
   let imgElement;
   let path;
 
@@ -38,7 +40,7 @@
   $: path = intersected ? src : placeholder;
 
   onMount(() => {
-    observer = new IntersectionObserver(observerCallback)
+    observer = new IntersectionObserver(observerCallback);
     observer.observe(imgElement);
 
     return () => {
@@ -59,6 +61,6 @@
   on:load={handleLoad}
   bind:this={imgElement}
   {...$$restProps}
-  class="svelte-lazy-image"
+  class="svelte-lazy-image{propsClasses}"
   class:svelte-lazy-image--loaded={loaded}
 />
