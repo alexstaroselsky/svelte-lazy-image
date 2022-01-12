@@ -28,7 +28,7 @@
    */
   export let alt;
 
-  const propsClasses = $$restProps.class ? " " + $$restProps.class : "";
+  $: cssClass = $$props.class || "";
 
   let imgElement;
   let path;
@@ -61,6 +61,6 @@
   on:load={handleLoad}
   bind:this={imgElement}
   {...$$restProps}
-  class="svelte-lazy-image{propsClasses}"
+  class="svelte-lazy-image {cssClass}"
   class:svelte-lazy-image--loaded={loaded}
 />
