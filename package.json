@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/alexstaroselsky/svelte-lazy-image.git"
   },
+  "license": "MIT",
   "svelte": "./src/index.js",
   "module": "./index.mjs",
   "types": "./types/index.d.ts",
@@ -34,5 +35,5 @@
     "index.js",
     "types"
   ],
-  "version": "0.2.0"
+  "version": "0.2.1"
 }
