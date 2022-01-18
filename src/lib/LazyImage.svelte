@@ -1,17 +1,5 @@
 <script>
-	import { createEventDispatcher, onMount } from 'svelte';
-
-	const dispatch = createEventDispatcher();
-
-	let observerCallback = function (entries, observer) {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				dispatch('intersecting');
-				intersected = true;
-				observer.unobserve(imgElement);
-			}
-		});
-	};
+	import { onMount } from 'svelte';
 
 	/**
 	 * Path to placeholder image.
@@ -31,6 +19,13 @@
 	 */
 	export let alt;
 
+	/**
+	 * IntersectionObserver options
+	 * @type {{ root: any; rootMargin: string; threshold: number; }}
+	 * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver}
+	 */
+	export let options = { root: null, rootMargin: '0px 0px 0px 0px', threshold: 0.0 };
+
 	let imgElement;
 	let path;
 
@@ -42,13 +37,19 @@
 	$: cssClass = $$props.class || '';
 
 	onMount(() => {
-		observer = new IntersectionObserver(observerCallback);
+		observer = new IntersectionObserver((entries, self) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					intersected = true;
+					self.unobserve(imgElement);
+				}
+			});
+		}, options);
 		observer.observe(imgElement);
 
 		return () => {
 			if (observer) {
 				observer.unobserve(imgElement);
-				observer.disconnect();
 			}
 		};
 	});

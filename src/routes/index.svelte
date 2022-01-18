@@ -35,6 +35,7 @@
 				src="https://via.placeholder.com/250?text=src2"
 				placeholder="https://via.placeholder.com/250?text=placeholder2"
 				alt="Lorem Ipsum"
+				options={{ threshold: 1 }}
 				on:intersecting={() => console.log('intersecting2')}
 			/>
 		</div>

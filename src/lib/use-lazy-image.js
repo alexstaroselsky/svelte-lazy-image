@@ -1,10 +1,10 @@
 export default function useLazyImage(
 	node,
-	{ root = null, rootMargin = '0px', threshold = 0 } = {},
+	{ root = null, rootMargin = '0px 0px 0px 0px', threshold = 0.0 } = {},
 ) {
 	if (window && 'IntersectionObserver' in window) {
 		const observer = new IntersectionObserver(
-			(entries, self) => {
+			entries => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
 						const image = entry.target;
@@ -17,7 +17,7 @@ export default function useLazyImage(
 							image.srcset = image.dataset.srcset;
 						}
 
-						self.unobserve(image);
+						observer.unobserve(image);
 					}
 				});
 			},
@@ -26,7 +26,8 @@ export default function useLazyImage(
 				rootMargin,
 				threshold,
 			},
-		).observe(node);
+		);
+		observer.observe(node);
 
 		return {
 			destroy() {
