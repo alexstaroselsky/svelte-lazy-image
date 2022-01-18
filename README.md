@@ -82,6 +82,6 @@ Specify IntersectionObserver [options](https://developer.mozilla.org/en-US/docs/
   src="https://via.placeholder.com/250?text=src"
   placeholder="https://via.placeholder.com/250?text=placeholder"
   alt="Lorem Ipsum"
-  options={{ threshold: 1 }}
+  options={{ threshold: 0.5 }}
 />
 ```
