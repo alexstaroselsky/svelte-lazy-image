@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
-yarn.lock
-package-lock.json
-/index.js
-/index.mjs
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example

@@ -10,6 +10,29 @@ npm install svelte-lazy-image
 
 ### Svelte:
 
+#### use:action
+
+```html
+<img
+  data-src="https://via.placeholder.com/250?text=src1"
+  alt="foobar"
+  use:lazyImage
+/>
+```
+
+Specify IntersectionObserver [options](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver):
+
+```html
+<img
+  src="https://via.placeholder.com/250?text=placeholder1"
+  data-src="https://via.placeholder.com/250?text=src1"
+  alt="foobar"
+  use:lazyImage={{ threshold: 0.5 }}
+/>
+```
+
+#### Component
+
 ```html
 <script>
   import LazyImage from 'svelte-lazy-image';
