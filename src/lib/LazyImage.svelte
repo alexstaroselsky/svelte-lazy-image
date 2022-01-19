@@ -67,6 +67,6 @@
 	on:load={handleLoad}
 	bind:this={imgElement}
 	{...$$restProps}
-	class="svelte-lazy-image{cssClass}"
+	class="svelte-lazy-image {cssClass}"
 	class:svelte-lazy-image--loaded={loaded}
 />
