@@ -1,8 +1,8 @@
 <script>
   import { onMount } from "svelte";
 
-  let observerCallback = function (entries, observer) {
-    entries.forEach((entry) => {
+  let observerCallback = function(entries, observer) {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         intersected = true;
         observer.unobserve(imgElement);
