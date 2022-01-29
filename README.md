@@ -16,28 +16,21 @@ Set `data-src` and/or `data-srcset` on an `img` element:
 
 ```html
 <script>
-  import { useLazyImage as lazyImage } from 'svelte-lazy-image';
+	import { useLazyImage as lazyImage } from 'svelte-lazy-image';
 </script>
 
-<img
-  data-src="https://via.placeholder.com/250?text=src1"
-  alt="foobar"
-  use:lazyImage
-/>
+<img data-src="https://via.placeholder.com/250?text=src1" alt="foobar" use:lazyImage />
 ```
 
 Specify IntersectionObserver [options](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) via object passed to `use`:
 
 ```html
 <script>
-  import { LazyImage, useLazyImage as lazyImage } from 'svelte-lazy-image';
+	import { LazyImage, useLazyImage as lazyImage } from 'svelte-lazy-image';
 </script>
 
-<img
-  src="https://via.placeholder.com/250?text=placeholder1"
-  data-src="https://via.placeholder.com/250?text=src1"
-  alt="foobar"
-  use:lazyImage={{ threshold: 0.5 }}
+<img src="https://via.placeholder.com/250?text=placeholder1"
+data-src="https://via.placeholder.com/250?text=src1" alt="foobar" use:lazyImage={{ threshold: 0.5 }}
 />
 ```
 
@@ -45,13 +38,13 @@ Specify IntersectionObserver [options](https://developer.mozilla.org/en-US/docs/
 
 ```html
 <script>
-  import { LazyImage } from 'svelte-lazy-image';
+	import { LazyImage } from 'svelte-lazy-image';
 </script>
 
 <LazyImage
-  src="https://via.placeholder.com/250?text=src"
-  placeholder="https://via.placeholder.com/250?text=placeholder"
-  alt="Lorem Ipsum"
+	src="https://via.placeholder.com/250?text=src"
+	placeholder="https://via.placeholder.com/250?text=placeholder"
+	alt="Lorem Ipsum"
 />
 ```
 
@@ -59,15 +52,15 @@ The component uses `$$restProps` to pass props other than `placeholder`, `src`, 
 
 ```html
 <script>
-  import { LazyImage } from 'svelte-lazy-image';
+	import { LazyImage } from 'svelte-lazy-image';
 </script>
 
 <LazyImage
-  src="https://via.placeholder.com/250?text=src"
-  placeholder="https://via.placeholder.com/250?text=placeholder"
-  alt="Lorem Ipsum"
-  srcset="https://via.placeholder.com/480 480w, https://via.placeholder.com/800 800w"
-  sizes="(max-width: 600px) 480px, 800px"
+	src="https://via.placeholder.com/250?text=src"
+	placeholder="https://via.placeholder.com/250?text=placeholder"
+	alt="Lorem Ipsum"
+	srcset="https://via.placeholder.com/480 480w, https://via.placeholder.com/800 800w"
+	sizes="(max-width: 600px) 480px, 800px"
 />
 ```
 
