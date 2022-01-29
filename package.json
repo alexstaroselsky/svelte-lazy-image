@@ -1,7 +1,7 @@
 {
   "name": "svelte-lazy-image",
-  "version": "0.3.0",
-  "description": "Svelte action and component to lazy load images using Intersection Observer",
+  "description": "Svelte component to lazy load images using Intersection Observer",
+  "version": "0.4.0",
   "author": {
     "name": "Alexander Staroselsky",
     "url": "https://github.com/alexstaroselsky"
