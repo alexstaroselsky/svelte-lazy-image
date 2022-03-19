@@ -66,7 +66,7 @@ The component uses `$$restProps` to pass props other than `placeholder`, `src`, 
 
 Specify IntersectionObserver [options](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver):
 
-```
+```html
 <script>
   import { LazyImage } from 'svelte-lazy-image';
 </script>
