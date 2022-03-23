@@ -21,7 +21,7 @@
 
 	/**
 	 * IntersectionObserver options
-	 * @type {{ root: any; rootMargin: string; threshold: number; }}
+	 * @type {{ root?: any; rootMargin?: string; threshold?: number; }}
 	 * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver}
 	 */
 	export let options = { root: null, rootMargin: '0px 0px 0px 0px', threshold: 0.0 };
